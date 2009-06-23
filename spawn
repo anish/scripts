@@ -1,0 +1,9 @@
+#!/bin/sh
+#set -x
+
+if [ $# -eq 0 ]
+then
+        echo "Nothing To Spawn" >&2
+        exit 1
+fi
+$* > /dev/null 2>&1 &
